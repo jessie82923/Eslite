@@ -17,3 +17,6 @@
 - menu遮罩
 - 多種animation
 - lazy loading
+
+
+** 如有侵權還請mail(jessie82923@gmail.com)告知，感謝！ **
