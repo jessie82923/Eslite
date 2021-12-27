@@ -1,3 +1,12 @@
+import "./index.css";
+import innerHouse1 from "../img/innerHouse1.jpg";
+import innerHouse2 from "../img/innerHouse2.jpg";
+import innerHouse3 from "../img/innerHouse3.jpg";
+import innerHouse4 from "../img/innerHouse4.jpg";
+import innerHouse5 from "../img/innerHouse5.jpg";
+import searchIcon from "../img/searchIcon.png";
+import esliteLogo from "../img/eslite-logo.png";
+
 // animation.css 涵式
 const animateCSS = (element, animation, prefix = "animate__") =>
   // We create a Promise and return it
@@ -28,6 +37,8 @@ function changeSlide(i) {
 }
 //自動撥放幻燈片
 let k = -1;
+var timer;
+
 function autoChangeSlide() {
   k += 1;
   if (k >= slideLen) k = 0;
@@ -35,6 +46,13 @@ function autoChangeSlide() {
   //要用全域變數宣告timer
   timer = setTimeout("autoChangeSlide()", 3000);
 }
+window.autoChangeSlide = autoChangeSlide;
+
+$(document).ready(function () {
+  autoChangeSlide();
+  console.log("ready");
+});
+
 //點擊dot切換幻燈片
 $(".dots").on("click", ".dot", function () {
   let whichDot = $(".dot").index(this);
@@ -125,11 +143,11 @@ let option_lazyload = {
 };
 const watcher = new IntersectionObserver(onEnterView, option_lazyload); //callback:當target進入window範圍時要做什麼
 const lazyimgs = $(".ll-img-box");
-for (imgBox of lazyimgs) {
+for (let imgBox of lazyimgs) {
   watcher.observe(imgBox);
 }
 function onEnterView(entries, observer) {
-  for (entry of entries) {
+  for (let entry of entries) {
     if (entry.isIntersecting) {
       let img = entry.target.childNodes[1];
       img.setAttribute("src", img.dataset.src);
