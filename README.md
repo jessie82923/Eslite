@@ -9,6 +9,9 @@
 - fontawsome
 - animate.css
 
+## 打包
+- webpack
+
 ## 互動
 - 圖片輪播(手動＋自動)
 - menu遮罩
