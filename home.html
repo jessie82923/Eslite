@@ -6,11 +6,12 @@
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
     />
     <meta name="author" content="Jessie" />
     <meta name="description" content="Copycat of Eslite" />
-    <link rel="icon" href="./img/eslite-logo.png" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -25,7 +26,7 @@
       integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
       crossorigin="anonymous"
     />
-    <!-- <link rel="stylesheet" href="src/index.css" /> -->
+    <link rel="stylesheet" href="src/index.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -35,11 +36,11 @@
   <body>
     <div class="header">
       <div class="slides">
-        <img class="slide object-fit" src="img/innerHouse1.jpg" alt="" />
-        <img class="slide object-fit" src="img/innerHouse2.jpg" alt="" />
-        <img class="slide object-fit" src="img/innerHouse3.jpg" alt="" />
-        <img class="slide object-fit" src="img/innerHouse4.jpg" alt="" />
-        <img class="slide object-fit" src="img/innerHouse5.jpg" alt="" />
+        <img class="slide object-fit" src="./img/innerHouse1.jpg" alt="" />
+        <img class="slide object-fit" src="./img/innerHouse2.jpg" alt="" />
+        <img class="slide object-fit" src="./img/innerHouse3.jpg" alt="" />
+        <img class="slide object-fit" src="./img/innerHouse4.jpg" alt="" />
+        <img class="slide object-fit" src="./img/innerHouse5.jpg" alt="" />
       </div>
       <div
         class="
@@ -94,9 +95,14 @@
           </a>
         </div>
         <div
-          class="iconRight d-flex justify-content-between align-items-center"
+          class="
+            iconRight
+            d-flex
+            justify-content-md-between justify-content-end
+            align-items-center
+          "
         >
-          <div class="search-icon rightIcon" id="searchIcon">
+          <div class="search-icon rightIcon d-md-block d-none" id="searchIcon">
             <i class="fas fa-search"></i>
           </div>
           <div class="hamburger-icon rightIcon" id="hamburgerIcon">
@@ -142,7 +148,7 @@
               id="closeIcon"
             ></i>
           </div>
-          <table>
+          <table class="d-sm-table d-none">
             <thead>
               <tr class="row text-left">
                 <th class="col-3">關於誠品</th>
@@ -153,7 +159,7 @@
             </thead>
             <tbody>
               <tr class="row text-left">
-                <td class="col-3"><a href="#"> 企業理念</a></td>
+                <td class="col-3"><a href="#">企業理念</a></td>
                 <td class="col-3"><a href="#">台灣北部</a></td>
                 <td class="col-3"><a href="#">誠品新聞</a></td>
                 <td class="col-3"><a href="#">成品線上</a></td>
@@ -184,14 +190,46 @@
               </tr>
             </tbody>
           </table>
+          <div class="mask-content-rwd">
+            <h4 style="border-bottom: 1px solid white">關於誠品</h4>
+            <div class="row">
+              <div class="col-5">企業理念</div>
+              <div class="col-5">創辦人故事</div>
+              <div class="col-5">經營內容</div>
+              <div class="col-5">發展歷程</div>
+              <div class="col-5">得獎事蹟</div>
+            </div>
+            <h4 style="border-bottom: 1px solid white">營業據點</h4>
+            <div class="row">
+              <div class="col-5">台灣北部</div>
+              <div class="col-5">台灣中部</div>
+              <div class="col-5">台灣南部</div>
+              <div class="col-5">台灣東部</div>
+              <div class="col-5">香港</div>
+            </div>
+            <h4 style="border-bottom: 1px solid white">新聞中心</h4>
+            <div class="row">
+              <div class="col-5">誠品新聞</div>
+              <div class="col-5">最新公告</div>
+              <div class="col-5">影音專區</div>
+            </div>
+            <h4 style="border-bottom: 1px solid white">相關連結</h4>
+            <div class="row">
+              <div class="col-5">成品線上</div>
+              <div class="col-5">迷誠品</div>
+              <div class="col-5">會員專區</div>
+              <div class="col-5">客服中心</div>
+              <div class="col-5">成品生活投資人專區</div>
+            </div>
+          </div>
           <div>
             <div class="line col-12 my-3"></div>
             <div class="col-12 mt-4 mb-3 pl-0 lan-text">Language</div>
-            <ul class="list-unstyled lan-list d-flex">
-              <li><a href="">繁體中文</a></li>
-              <li><a href="">简体中文</a></li>
-              <li><a href="">English</a></li>
-              <li><a href="">日本語</a></li>
+            <ul class="list-unstyled lan-list d-flex row">
+              <li class="col-md-2 col-5"><a href="">繁體中文</a></li>
+              <li class="col-md-2 col-5"><a href="">简体中文</a></li>
+              <li class="col-md-2 col-5"><a href="">English</a></li>
+              <li class="col-md-2 col-5"><a href="">日本語</a></li>
             </ul>
           </div>
         </div>
@@ -208,6 +246,7 @@
     </div>
     <div
       class="
+        main-wrapper
         container
         d-flex
         flex-column
@@ -215,10 +254,13 @@
         align-items-center
       "
     >
-      <div
-        class="posts-wrapper d-flex justify-content-between align-items-center"
-      >
-        <div class="posts-title d-flex flex-column justify-content-around">
+      <h3 class="posts-title-rwd" style="letter-spacing: 2px">
+        <strong
+          ><span style="border-bottom: 3px solid black">最新</span>消息</strong
+        >
+      </h3>
+      <div class="posts-wrapper d-flex justify-content-lg-between">
+        <div class="posts-title flex-column justify-content-around">
           <h3 style="letter-spacing: 2px">
             <strong
               ><span style="border-bottom: 3px solid black">最新</span
@@ -258,6 +300,8 @@
           </div>
         </div>
       </div>
+      <a class="posts-hperlink posts-hperlink-rwd" href="">更多消息</a>
+
       <!-- lazying loading -->
       <div class="businesses-wrapper">
         <h3 style="letter-spacing: 2px">
@@ -285,8 +329,6 @@
             />
             <div class="ll-img-mask animate__animated">誠品生活</div>
           </div>
-        </div>
-        <div class="lazy-loading-imgs">
           <div class="ll-img-box">
             <img
               class="object-fit animate__animated"
@@ -305,8 +347,6 @@
             />
             <div class="ll-img-mask animate__animated">誠品展演</div>
           </div>
-        </div>
-        <div class="lazy-loading-imgs">
           <div class="ll-img-box">
             <img
               class="object-fit animate__animated"
@@ -328,14 +368,14 @@
         </div>
       </div>
     </div>
-    <footer class="row justify-content-center align-items-center px-5">
-      <div class="col-5 text-left">
+    <footer class="row justify-content-center align-items-center">
+      <div class="col-lg-6 col-12 text-left">
         <span class="social-link"><i class="fab fa-facebook-f"></i></span>
         <span class="social-link"> <i class="fab fa-instagram"></i></span>
         <span class="social-link"><i class="fab fa-weibo"></i></span>
         <span class="social-link"><i class="fab fa-twitter"></i></span>
       </div>
-      <div class="col-5 text-right">
+      <div class="col-lg-6 col-12 text-lg-right">
         <div class="row">
           <div class="col-12 footer-hyperlink">
             <a href="">相關連結&ensp;|&ensp;</a>
@@ -345,7 +385,7 @@
             <a href="">網站地圖</a>
           </div>
           <div class="col-12 text-light">
-            Copyright © 2019 Eslite Corporation. All rights reserved.
+            Copyright © 2021 Jessie practice. All rights reserved.
           </div>
         </div>
       </div>
@@ -367,7 +407,7 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-    <!-- <script src="./src/index.js"></script> -->
+    <script src="./src/index.js"></script>
     <script></script>
   </body>
 </html>
